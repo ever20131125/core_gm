@@ -1,0 +1,42 @@
+<?php
+/**
+ * Auto generated from sortserver.proto at 2023-02-13 12:39:21
+ */
+
+namespace Xnhd\Core\Pb\Sdo {
+/**
+ * MSGID_SORTSERVER enum
+ */
+final class MSGID_SORTSERVER
+{
+    const MSGID_CSOR_REQ_GETRANK = 7681;
+    const MSGID_SORC_RESP_GETRANK = 40449;
+    const MSGID_CSOR_REQ_GETMYRANK = 7682;
+    const MSGID_SORC_RESP_GETMYRANK = 40450;
+    const MSGID_SORC_NOTI_ROLERANKUPDATE = 24066;
+    const MSGID_CSOR_REQ_GETROLERANKLIST = 7683;
+    const MSGID_SORC_RESP_GETROLERANKLIST = 40451;
+    const MSGID_CSOR_REQ_REMOVEFROMRANK = 7684;
+    const MSGID_SORC_RESP_REMOVEFROMRANK = 40452;
+
+    /**
+     * Returns defined enum values
+     *
+     * @return int[]
+     */
+    public function getEnumValues()
+    {
+        return array(
+            'MSGID_CSOR_REQ_GETRANK' => self::MSGID_CSOR_REQ_GETRANK,
+            'MSGID_SORC_RESP_GETRANK' => self::MSGID_SORC_RESP_GETRANK,
+            'MSGID_CSOR_REQ_GETMYRANK' => self::MSGID_CSOR_REQ_GETMYRANK,
+            'MSGID_SORC_RESP_GETMYRANK' => self::MSGID_SORC_RESP_GETMYRANK,
+            'MSGID_SORC_NOTI_ROLERANKUPDATE' => self::MSGID_SORC_NOTI_ROLERANKUPDATE,
+            'MSGID_CSOR_REQ_GETROLERANKLIST' => self::MSGID_CSOR_REQ_GETROLERANKLIST,
+            'MSGID_SORC_RESP_GETROLERANKLIST' => self::MSGID_SORC_RESP_GETROLERANKLIST,
+            'MSGID_CSOR_REQ_REMOVEFROMRANK' => self::MSGID_CSOR_REQ_REMOVEFROMRANK,
+            'MSGID_SORC_RESP_REMOVEFROMRANK' => self::MSGID_SORC_RESP_REMOVEFROMRANK,
+        );
+    }
+}
+}

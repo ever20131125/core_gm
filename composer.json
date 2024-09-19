@@ -1,0 +1,35 @@
+{
+    "name": "xnhd/core",
+    "description": "XNHD CORE LIBs.",
+    "keywords": ["core", "xnhd"],
+    "license": "MIT",
+    "support": {
+        "issues": "http://gitlab.xnhd.com/x/core/issues",
+        "source": "http://gitlab.xnhd.com/x/core"
+    },
+    "authors": [
+        {
+            "name": "wufl",
+            "email": "wufl@mail.51.com"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Xnhd\\Core\\": "src/"
+        },
+        "files": [
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
