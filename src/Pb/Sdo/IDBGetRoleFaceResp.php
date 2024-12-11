@@ -34,32 +34,32 @@ class IDBGetRoleFaceResp extends \ProtobufMessage
         self::ARRMYFACEID => array(
             'name' => 'arrMyFaceID',
             'repeated' => true,
-            'type' => \ProtobufMessage::PB_TYPE_INT,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
         self::ARRFAVORFACE => array(
             'name' => 'arrFavorFace',
             'repeated' => true,
-            'type' => \ProtobufMessage::PB_TYPE_INT,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
         self::ARRDEFAULTMALEFACE => array(
             'name' => 'arrDefaultMaleFace',
             'repeated' => true,
-            'type' => \ProtobufMessage::PB_TYPE_INT,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
         self::ARRDEFAULTMALEPAINT => array(
             'name' => 'arrDefaultMalePaint',
             'repeated' => true,
-            'type' => \ProtobufMessage::PB_TYPE_INT,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
         self::ARRDEFAULTFEMALEFACE => array(
             'name' => 'arrDefaultFeMaleFace',
             'repeated' => true,
-            'type' => \ProtobufMessage::PB_TYPE_INT,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
         self::ARRDEFAULTFEMALEPAINT => array(
             'name' => 'arrDefaultFeMalePaint',
             'repeated' => true,
-            'type' => \ProtobufMessage::PB_TYPE_INT,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
     );
 

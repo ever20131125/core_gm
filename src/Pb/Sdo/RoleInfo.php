@@ -84,7 +84,7 @@ class RoleInfo extends \ProtobufMessage
         self::NFACEID => array(
             'name' => 'nFaceID',
             'required' => false,
-            'type' => \ProtobufMessage::PB_TYPE_INT,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
         self::HEADFRAME => array(
             'name' => 'headFrame',
