@@ -637,7 +637,7 @@ class SdoGameMaster
      * 用户使用道具
      */
     public function _startToUseItem($zoneId, $roleId, $source, $items)
-    {
+    { 
         $request = new IDBUseItemReq();
         $request->setNRoleID($roleId);
         $request->setSource($source);
