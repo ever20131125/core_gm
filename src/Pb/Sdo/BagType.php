@@ -17,6 +17,7 @@ final class BagType
     const enmBagType_Locker = 5;
     const enmBagType_Plan = 6;
     const enmBagType_Unlock = 7;
+    const enmBagType_PVP = 8;
     const enmBagType_All = 10;
 
     /**
@@ -35,6 +36,7 @@ final class BagType
             'enmBagType_Locker' => self::enmBagType_Locker,
             'enmBagType_Plan' => self::enmBagType_Plan,
             'enmBagType_Unlock' => self::enmBagType_Unlock,
+            'enmBagType_PVP' => self::enmBagType_PVP,
             'enmBagType_All' => self::enmBagType_All,
         );
     }

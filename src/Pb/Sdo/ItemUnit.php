@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto generated from complex.proto at 2023-02-13 12:39:22
+ * Auto generated from ItemUnit.proto at 2025-05-08 08:50:14
  */
 
 namespace Xnhd\Core\Pb\Sdo {
@@ -26,6 +26,8 @@ class ItemUnit extends \ProtobufMessage
     const NOPTION = 14;
     const NBINDID = 15;
     const NADDQUANTITY = 16;
+    const NBINDIDOLCARDID = 17;
+    const NBINDPVPSLOT = 18;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -112,6 +114,16 @@ class ItemUnit extends \ProtobufMessage
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_INT,
         ),
+        self::NBINDIDOLCARDID => array(
+            'name' => 'nBindIdolCardID',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_INT,
+        ),
+        self::NBINDPVPSLOT => array(
+            'name' => 'nBindPvpSlot',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_INT,
+        ),
     );
 
     /**
@@ -145,6 +157,8 @@ class ItemUnit extends \ProtobufMessage
         $this->values[self::NOPTION] = null;
         $this->values[self::NBINDID] = null;
         $this->values[self::NADDQUANTITY] = null;
+        $this->values[self::NBINDIDOLCARDID] = null;
+        $this->values[self::NBINDPVPSLOT] = null;
     }
 
     /**
@@ -682,6 +696,72 @@ class ItemUnit extends \ProtobufMessage
     public function hasNAddQuantity()
     {
         return $this->get(self::NADDQUANTITY) !== null;
+    }
+
+    /**
+     * Sets value of 'nBindIdolCardID' property
+     *
+     * @param integer $value Property value
+     *
+     * @return null
+     */
+    public function setNBindIdolCardID($value)
+    {
+        return $this->set(self::NBINDIDOLCARDID, $value);
+    }
+
+    /**
+     * Returns value of 'nBindIdolCardID' property
+     *
+     * @return integer
+     */
+    public function getNBindIdolCardID()
+    {
+        $value = $this->get(self::NBINDIDOLCARDID);
+        return $value === null ? (integer)$value : $value;
+    }
+
+    /**
+     * Returns true if 'nBindIdolCardID' property is set, false otherwise
+     *
+     * @return boolean
+     */
+    public function hasNBindIdolCardID()
+    {
+        return $this->get(self::NBINDIDOLCARDID) !== null;
+    }
+
+    /**
+     * Sets value of 'nBindPvpSlot' property
+     *
+     * @param integer $value Property value
+     *
+     * @return null
+     */
+    public function setNBindPvpSlot($value)
+    {
+        return $this->set(self::NBINDPVPSLOT, $value);
+    }
+
+    /**
+     * Returns value of 'nBindPvpSlot' property
+     *
+     * @return integer
+     */
+    public function getNBindPvpSlot()
+    {
+        $value = $this->get(self::NBINDPVPSLOT);
+        return $value === null ? (integer)$value : $value;
+    }
+
+    /**
+     * Returns true if 'nBindPvpSlot' property is set, false otherwise
+     *
+     * @return boolean
+     */
+    public function hasNBindPvpSlot()
+    {
+        return $this->get(self::NBINDPVPSLOT) !== null;
     }
 }
 }
