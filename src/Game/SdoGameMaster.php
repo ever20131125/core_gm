@@ -66,7 +66,12 @@ use Xnhd\Core\Pb\Sdo\SGSGMQualifyInfoResp;
 use Xnhd\Core\Pb\Sdo\SGSGMSetQualifyInfoReq;
 use Xnhd\Core\Pb\Sdo\SGSGMSetQualifyInfoResp;
 use Xnhd\Core\Socket\SocketTrait;
-
+use Xnhd\Core\Pb\Sdo\IDBAddItemReq;
+use Xnhd\Core\Pb\Sdo\ItemExtra;
+use Xnhd\Core\Pb\Sdo\IDBAddItemResp;
+use Xnhd\Core\Pb\Sdo\IDBUseItemReq;
+use Xnhd\Core\Pb\Sdo\OperateItemInfo;
+use Xnhd\Core\Pb\Sdo\IDBUseItemResp;
 
 class SdoGameMaster
 {
@@ -601,4 +606,59 @@ class SdoGameMaster
 
         return $this->getResponse($request, $response, $message, $zoneId);
     }
+
+    /*
+     * 增加用户道具到背包
+     */
+    public function _addItemToBag($zoneId, $roleId, $source, $items)
+    {
+        $request = new IDBAddItemReq();
+        $request->setNRoleID($roleId);
+        $request->setSource($source);
+
+        foreach ($items as $item) {
+            $manageAsset = new ItemExtra();
+            $manageAsset->setNItemID($item['itemid']);
+            $manageAsset->setNQuantity($item['quantity']);
+
+            $request->appendArrItemExtra($manageAsset);
+        }
+
+        $messages = new MSGID_ITEMDBSERVER();
+        $arrMessage = $messages->getEnumValues();
+        $message = $arrMessage['MSGID_CIDB_REQ_ADDITEM'];
+
+        $response = new IDBAddItemResp();
+
+        return $this->getResponse($request, $response, $message, $zoneId);
+    }
+
+    /*
+     * 用户使用道具
+     */
+    public function _startToUseItem($zoneId, $roleId, $source, $items)
+    { 
+        $request = new IDBUseItemReq();
+        $request->setNRoleID($roleId);
+        $request->setSource($source);
+        $request->setNTargetID($roleId);
+
+        foreach ($items as $item) {
+            $manageAsset = new OperateItemInfo();
+            $manageAsset->setOperateItemType(1);
+            $manageAsset->setNItemID($item['itemid']);
+            $manageAsset->setNQuantity($item['quantity']);
+
+            $request->appendArrOperateItemInfo($manageAsset);
+        }
+
+        $messages = new MSGID_ITEMDBSERVER();
+        $arrMessage = $messages->getEnumValues();
+        $message = $arrMessage['MSGID_CIDB_REQ_USEITEM'];
+
+        $response = new IDBUseItemResp();
+        
+        return $this->getResponse($request, $response, $message, $zoneId);
+    }
+
 }
